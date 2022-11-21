@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function checkEmail() {
+
+    var emailRegEx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+     str = document.getElementById("txtEmail").value;
+      var array = str.split(';');        
+     for(var i =0;i<array.length;i++)
+     { 
+        var email = array[i];                
+         if(!email.match(emailRegEx))
+         {
+            alert('The email address '+ ' "' +email+ '" '+ ' is invalid');
+            return false;
+        }
+     }
+     return true;
+}
+</script>
+</head>
+<body>
+
+
+<h2>Enter email to Validate</h2>
+<form name="form1"  >
+<input type='text' name='text1' id='txtEmail'/>
+<input type="submit" name="submit"  onclick='Javascript:checkEmail();'/>
+
+</form>
+
+</body>
+</html>
+    
