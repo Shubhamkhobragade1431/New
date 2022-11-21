@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function digitKeyOnly(e) {
+  var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+  if ((keyCode >= 37 && keyCode <= 40) || (keyCode == 8 || keyCode == 9 || keyCode == 13) || (keyCode >= 48 && keyCode <= 57)) {
+    return true;
+  }
+  return false;
+}
+</script>
+</head>
+<body>
+<input class="text" name="Serial_Num" type="text" id="SrNo" size="2" maxlength="2" onkeypress="return digitKeyOnly(event)" />
+</body>
+</html>
