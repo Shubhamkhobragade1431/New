@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+#clock{
+height:120px;
+}
+</style>
+</head>
+<body>
+<script>
+function waitAndshow() {
+       
+       var systemdate = new Date();
+       document.getElementById("clock").innerHTML = systemdate.toLocaleTimeString();
+}
+
+     
+      setInterval(waitAndshow, 4000);
+</script>
+
+
+<h3> <span id="clock"></span> </h3>
+
+</body>
+</html>
