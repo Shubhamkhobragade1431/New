@@ -1,25 +1,29 @@
+<!DOCTYPE html>
 <html>
-<head>
-<style>
-#clock{
-height:120px;
-}
-</style>
-</head>
+    <head>
+    <style>
+        #fname{
+           height:15px;
+        }
+
+        </style>
+    </head>
 <body>
+
+
+
+ <b>Name:</b><input type="text" id="fname" value="Hello">
+
+
 <script>
-function waitAndshow() {
-       
-       var systemdate = new Date();
-       document.getElementById("clock").innerHTML = systemdate.toLocaleTimeString();
+document.getElementById("fname").onchange = function() {myFunction()};
+
+function myFunction() {
+  var x = document.getElementById("fname").value = " Friends ";
+
 }
-
-     
-      setInterval(waitAndshow, 4000);
+ setInterval(myFunction, 4000);
 </script>
-
-
-<h3> <span id="clock"></span> </h3>
-
+    
 </body>
 </html>
